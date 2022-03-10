@@ -1,6 +1,9 @@
 # DigiBox_Test
 Api Rest for test of DigiBox
 Test exercise for DigiBox recruitment process.
+The code is hosted in the second branch of the repository.
+
+
 
 The application was created in NodeJs, Postman was used to simulate the client section and MySQL for the database.
 
