@@ -1,0 +1,21 @@
+{
+  "name": "digibox_test",
+  "version": "1.0.0",
+  "description": "Test For DigiBox",
+  "main": "app.js",
+  "scripts": {
+    "test": "mocha tests/app.test.js --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.2",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "knex": "^1.0.3",
+    "mocha": "^9.2.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "supertest": "^6.2.2"
+  }
+}
