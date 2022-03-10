@@ -1,9 +1,9 @@
-const databaseService = () => { //Conexión a la base de datos
+const databaseService = () => { //Database Connection
    const knex = require('knex')({
       client: 'mysql',
       connection: {
-         //Variables de entorno alojadas en el archivo .env
-         host: process.env.DB_HOST,
+         //Enviroment variables on .enb file
+         host: process.env.DB_HOST, 
          port: 3306,
          user: process.env.DB_USER,
          password: process.env.DB_PASSWORD,
@@ -11,17 +11,17 @@ const databaseService = () => { //Conexión a la base de datos
       }
    });
 
-   const table = "customers" //Nombre de la tabla
+   const table = "customers" //Table Name
 
-   const getCustomers = () => { //Lista todos los clientes
+   const getCustomers = () => { //All Customers
       return knex(table).select();
    }
 
-   const getCustomerID = (value) => { //Obtiene un cliente por ID
+   const getCustomerID = (value) => { //Get customer by id
       return knex(table).select().where(value);
    }
 
-   const createCustomer = ( { customer_id, name } ) => { //Método para insertar en la tabla
+   const createCustomer = ( { customer_id, name } ) => { //Create new customer
       return knex(table).insert({
          customer_id: customer_id,
          name: name
@@ -31,6 +31,7 @@ const databaseService = () => { //Conexión a la base de datos
    return { createCustomer, getCustomers, getCustomerID}
 };
 
+//Export all methods from de service
 module.exports = {
    databaseService,
 } 
