@@ -1,8 +1,8 @@
-const { Router } = require('express');
-const { databaseService } = require('../../services/database');
+const { Router } = require('express'); 
+const { databaseService } = require('../../services/database'); //Use methods from databe service
 
-const router = Router();
-const service_db =  databaseService();
+const router = Router(); //New Route
+const service_db =  databaseService(); //Creat object
 
 
 router.get('/', ( request, response ) => { //Todos los clientes
@@ -41,4 +41,5 @@ router.post('/', ( request, response ) => { //Nuevo cliente
    })
 });
 
+//Exports all routes
 module.exports = router;
